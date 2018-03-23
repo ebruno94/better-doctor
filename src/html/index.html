@@ -2,10 +2,66 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Super Galactic Space Calculator | Ernest Bruno</title>
+        <title>Better Doctor | Ernest Bruno</title>
     </head>
     <body>
-        
+        <div class="container">
+            <div class="jumbotron">
+                <h3>Welcome To</h3>
+                <h1>BETTER DOCTOR</h1>
+                <hr>
+                <p>The best place to look for doctors in Seattle</p>
+                <form id="searchBar">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label for="searchBar">Search: </label>
+                            <input type="text" name="searchBar" id="query" placeholder="Search for a doctor/condition/practice" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p>Search Options:</p>
+                                <label class="radio-inline">
+                                    <input type="radio" name="searchOption" value="doctor" checked> Doctor
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="searchOption" value="condition"> Condition
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="searchOption" value="practice"> Practice
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <p>Results per page:</p>
+                                <label class="radio-inline">
+                                    <input type="radio" name="limit" value="10" checked> 10
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="limit" value="25"> 25
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <button type="submit" name="button">Search</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="container" id="searchInfo">
+
+        </div>
+
+        <div class="container" id="doctorSearchContainer">
+
+        </div>
     <div class="footer">
         <p>Copyright (C) by Ernest Bruno, 2018.</p>
     </div>
