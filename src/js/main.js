@@ -6,6 +6,7 @@ import "../css/bootstrap.css";
 $(document).ready(function(){
     $("#searchBar").submit(function(event){
         event.preventDefault();
+        $('#resultContainer').show("slide");
         let option = $("input:radio[name=searchOption]:checked").val();
         let query = $("#query").val();
         let limit = $("input:radio[name=limit]:checked").val();
@@ -19,7 +20,7 @@ $(document).ready(function(){
                 if (doctorInfo.data.length === 0){
                     $('#doctorSearchContainer').append("<h1> OOPS! NO DOCTORS MATCHED YOUR QUERY! </h1> <h3>Please try again.</h3>" );
                 } else{
-                    $("#searchInfo").append(`<h2> Here are you results! </h2>`);
+                    $("#searchInfo").append(`<h2> Here are your results! </h2>`);
                     for (let i = 0; i < doctorInfo.data.length; i++){
                         console.log(doctorInfo.data[i].practices[0]);
                         let firstName = doctorInfo.data[i].profile.first_name;
@@ -41,20 +42,20 @@ $(document).ready(function(){
                         let number = doctorInfo.data[i].practices[0].phones[0].number;
                         $("#doctorSearchContainer").append(`
                                 <div class="doctorCard">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <h2 class="doctorName"> ${firstName} ${lastName}, ${title} <h2>
-                                            <hr>
-                                            <h4 class="doctorLocation"> Location: ${city}, ${state} </h4>
-                                            <p> Address: ${street} ${city}, ${state} ${zip} </p>
-                                            <p> Phone number: ${number} </p>
-                                            <p class="web"> <a href="${websiteUrl}">Visit website</a></p>
-                                            <p> Accepting New Patients? ${accept}</p>
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h2 class="doctorName"> ${firstName} ${lastName}, ${title} <h2>
+                                                <hr>
+                                                <h4 class="doctorLocation"> Location: ${city}, ${state} </h4>
+                                                <p> Address: ${street} ${city}, ${state} ${zip} </p>
+                                                <p> Phone number: ${number} </p>
+                                                <p class="web"> <a href="${websiteUrl}">Visit website</a></p>
+                                                <p> Accepting New Patients? ${accept}</p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src=${img}>
+                                            </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <img src=${img}>
-                                        </div>
-                                    </div>
                                 </div>
                         <br>
                         `);
@@ -88,23 +89,23 @@ $(document).ready(function(){
                         accept = doctorInfo.data[i].practices[0].accepts_new_patients;
                         let websiteUrl = doctorInfo.data[i].practices[0].website;
                         let number = doctorInfo.data[i].practices[0].phones[0].number;
-                        $("#searchInfo").append(`<h2> Here are you results! </h2>`)
+                        $("#searchInfo").append(`<h2> Here are your results! </h2>`)
                         $("#doctorSearchContainer").append(`
                                 <div class="doctorCard">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <h2 class="doctorName"> ${firstName} ${lastName}, ${title} <h2>
-                                            <hr>
-                                            <h4 class="doctorLocation"> Location: ${city}, ${state} </h4>
-                                            <p> Address: ${street} ${city}, ${state} ${zip} </p>
-                                            <p> Phone number: ${number} </p>
-                                            <p class="web"> <a href=${websiteUrl}>Visit website</a></p>
-                                            <p> Accepting New Patients? <span id="accepting"></span></p>
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <h2 class="doctorName"> ${firstName} ${lastName}, ${title} <h2>
+                                                <hr>
+                                                <h4 class="doctorLocation"> Location: ${city}, ${state} </h4>
+                                                <p> Address: ${street} ${city}, ${state} ${zip} </p>
+                                                <p> Phone number: ${number} </p>
+                                                <p class="web"> <a href=${websiteUrl}>Visit website</a></p>
+                                                <p> Accepting New Patients? <span id="accepting"></span></p>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src=${img}>
+                                            </div>
                                         </div>
-                                        <div class="col-md-4">
-                                            <img src=${img}>
-                                        </div>
-                                    </div>
                                 </div>
                         <br>
                         `);

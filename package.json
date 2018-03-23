@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
-    "start": "webpack-dev-server --open",
+    "start": "npm run build; webpack-dev-server --open",
     "lint": "eslint src/js/*.js",
     "test": "karma start karma.conf.js"
   },

@@ -1,4 +1,45 @@
+body{
+    background-image: url('http://www.themesltd.com/headers2/dr_who_cartoon_doctor.png');
+}
 
+img{
+    height: 246px;
+    width: 214px;
+}
+
+#query{
+    width: 80%;
+}
+
+#intro{
+    text-align: center;
+    margin-top: 20px;
+    border: 2px solid #0d1a23;
+    box-shadow: 0 0 20px black;
+}
+
+.col-md-12 #btnCol{
+    text-align: center;
+}
+
+.hidden{
+    display: none;
+}
+
+#resultContainer{
+    margin-top: 20px;
+    border: 2px solid #0d1a23;
+    box-shadow: 0 0 20px black;
+    margin-bottom: 20px;
+}
+
+.btn{
+    color: white;
+    background-color: #0d1a23;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
 
 .footer {
   position: fixed;

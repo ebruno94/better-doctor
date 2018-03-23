@@ -1,19 +1,21 @@
-# Super Galactic Age Calculator
+# WYA DOC?!
 
-#### LET'S FIND OUT OUR AGE IN DIFFERENT PLANETS! 3/16/2018
+#### NOT FEELING WELL? SEARCH FOR A DOCTOR NEARBY! 3/23/2018
 
 #### By **Ernest Bruno**
 
 ## Description
 
-A website / program that lets users enter an age, or a date, and the program calculates the age with the user's desired planet. This website also converts age into seconds (to be implemented).
+A website / program that lets users enter a name or a condition, depending on the user's choice, on the search bar and the program returns a list of doctors depending on what the user searched for.
 
 
 ### Specs
-| Spec | Input | Output |
-| :-------------     | :------------- | :------------- |
-| **Program returns correct age if in Venus/Mars/Mercury/Jupiter**| User input: Age: 12 in Earth and convert to Venus | Output: "19.35" |
-| **Program returns user's number of years left to live given average life expectancy, age and planet to analyze ** | User input: "Earth", AvgLE = 69.66, age = 12 | Output: "57.66!" |
+| Specifications |
+| :-------------  |
+| **Program returns a list of doctors in Washington when user enters a condition.** |
+| **Program returns a list of doctors in Washington when user enters a name of a doctor.** |
+| **Program returns a string saying that there's something wrong with the search when query is invalid.** |
+| **Program returns a message when program does not find anything from database.** |
 
 ## Setup/Installation Requirements
 

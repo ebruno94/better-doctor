@@ -6,18 +6,21 @@
     </head>
     <body>
         <div class="container">
-            <div class="jumbotron">
-                <h3>Welcome To</h3>
-                <h1>BETTER DOCTOR</h1>
+            <div class="jumbotron" id="intro">
+                <h3>Welcome to</h3>
+                <h1>WYA, Doc?!</h1>
                 <hr>
+                <br>
                 <p>The best place to look for doctors in Washington!</p>
+                <br><br>
                 <form id="searchBar">
                     <div class="row">
                         <div class="col-md-12">
-                            <label for="searchBar">Search: </label>
-                            <input type="text" name="searchBar" id="query" placeholder="Search for a doctor/condition/practice" required>
+                            <label for="searchBar"></label>
+                            <input type="text" name="searchBar" id="query" placeholder="Search for a doctor/condition" required>
                         </div>
                     </div>
+                    <br>
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -27,9 +30,6 @@
                                 </label>
                                 <label class="radio-inline">
                                     <input type="radio" name="searchOption" value="condition"> Condition
-                                </label>
-                                <label class="radio-inline">
-                                    <input type="radio" name="searchOption" value="practice"> Practice
                                 </label>
                             </div>
                         </div>
@@ -45,8 +45,8 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
-                                <button type="submit" name="button">Search</button>
+                            <div class="col-md-12" id="btnCol">
+                                <button type="submit" name="button" class="btn">Search</button>
                             </div>
                         </div>
                     </div>
@@ -55,13 +55,18 @@
             </div>
         </div>
 
-        <div class="container" id="searchInfo">
 
+
+        <div class="container">
+            <div class="jumbotron hidden" id="resultContainer">
+                <div id="searchInfo">
+                </div>
+                <br><br>
+                <div  id="doctorSearchContainer">
+                </div>
+            </div>
         </div>
 
-        <div class="container" id="doctorSearchContainer">
-
-        </div>
     <div class="footer">
         <p>Copyright (C) by Ernest Bruno, 2018.</p>
     </div>
